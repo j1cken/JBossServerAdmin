@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="urn:jboss:bean-deployer:2.0">
+   <bean name="JBossServerAdmin" class="com.redhat.mbean.JBossServerAdmin">
+      <annotation>@org.jboss.aop.microcontainer.aspects.jmx.JMX(name="jboss.system:type=ServerAdmin",exposedInterface=com.redhat.mbean.JBossServerAdminMBean,registerDirectly=true)</annotation>
+      <property name="server"><inject bean="JBossServer"/></property>
+   </bean>
+</deployment>
